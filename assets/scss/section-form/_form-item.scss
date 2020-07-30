@@ -16,8 +16,27 @@
     background-color: rgba(255, 255, 255, 0.05);
 
     font-size: 1.125rem;
+
+    
+
+    &::placeholder {
+      color: $color-gray;
+    }
+
+    &:hover,
+    &:focus {
+     border-color: rgba(255, 255, 255, 0.15);
+     border-bottom-color: $color-light;
+     background-color: rgba(255, 255, 255, 0.15);
+
+     &::placeholder {
+       color: lighten($color-gray, 20%);
+     }
+
+    }   
   }
 }
+
 
 .form-item:nth-of-type(1) {
   @include md-sm {
@@ -25,9 +44,4 @@
   }
 }
 
-.form-item__input:hover,
-.form-item__input:focus {
-  border-color: rgba(255, 255, 255, 0.15);
-  border-bottom-color: $color-light;
-  background-color: rgba(255, 255, 255, 0.15);
-}
+

@@ -1,0 +1,41 @@
+.about-content {
+  display: block;
+
+  &__paragraph {
+    display: block;
+
+    @include lg-min {
+      font-size: 1.125rem;
+    }
+  }
+}
+
+.about-content p:first-of-type {
+  position: relative;
+
+  margin-top: -5px;
+}
+
+.about-content p:first-of-type::after {
+  position: absolute;
+  top: 0;
+  right: -50px;
+
+  width: 2px;
+  height: 200px;
+
+  content: "";
+
+  background-color: rgba(99, 117, 136, 0.1);
+
+  @include lg-md {
+    right: -$gap;
+  }
+  @include md-sm {
+    right: -10px;
+  }
+}
+
+.about-content p:last-of-type {
+  margin: 0;
+}

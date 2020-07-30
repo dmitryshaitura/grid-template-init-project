@@ -1,0 +1,16 @@
+.form-container {
+  display: grid;
+
+  @extend %container;
+  grid-gap: $gap;
+  grid-template-columns: repeat(3, 1fr);
+  @include lg-md {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include md-sm {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include sm {
+    grid-template-columns: 1fr;
+  }
+}

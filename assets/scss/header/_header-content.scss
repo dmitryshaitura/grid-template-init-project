@@ -9,6 +9,10 @@
 
   &__title {
     margin: 0 0 53px;
+
+    @include lg {
+      margin: 0 0 43px;
+    }
   }
 
   &__buttons {

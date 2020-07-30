@@ -1,0 +1,19 @@
+.about-container {
+  display: grid;
+
+  @extend %container;
+  grid-gap: 100px;
+  grid-template-columns: 1fr 274px;
+  @include lg-md {
+    grid-gap: 40px;
+    grid-template-columns: 1fr 271px;
+  }
+  @include md-sm {
+    grid-gap: $gap;
+    grid-template-columns: 1fr 236px;
+  }
+  @include sm {
+    grid-gap: $gap;
+    grid-template-columns: 1fr;
+  }
+}

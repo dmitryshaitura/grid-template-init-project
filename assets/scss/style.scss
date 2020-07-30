@@ -18,8 +18,15 @@
 @import "section-skills/skills";
 @import "section-skills/skill-item";
 @import "section-skills/skill-item-nth";
-@import "sections/section-about";
-@import "sections/section-form";
-@import "sections/section-posts";
+@import "section-about/about";
+@import "section-about/about-container";
+@import "section-about/about-content";
+@import "section-about/about-img";
+@import "section-form/form";
+@import "section-form/form-container";
+@import "section-form/form-item";
+@import "section-posts/posts";
+@import "section-posts/posts-item";
+@import "section-posts/posts-item-nth";
 
 @import "footer";

@@ -30,4 +30,11 @@
       grid-template-columns: 1fr;
     }
   }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+
+    margin-top: $gap;
+  }
 }

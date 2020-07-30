@@ -277,6 +277,18 @@ html [type="button"],
   /* 2 */
 }
 
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  /**
+       * Remove the inner border and padding in Firefox.
+       */
+  /**
+       * Restore the focus styles unset by the previous rule.
+       */
+}
+
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
@@ -464,7 +476,6 @@ template {
 }
 
 html {
-  overflow-y: scroll;
   overflow-x: hidden;
   letter-spacing: 0.1em;
   color: #637588;
@@ -481,12 +492,12 @@ h1 {
 }
 
 h2 {
-  margin-bottom: 56px;
   margin-top: 0;
-  font-size: 2.5rem;
+  margin-bottom: 56px;
   letter-spacing: 0.1em;
   color: #2d3651;
   font-family: "Roboto Slab", serif;
+  font-size: 2.5rem;
   line-height: 1.2em;
 }
 
@@ -520,16 +531,15 @@ a {
 .btn-accent__skills,
 .btn-accent__posts {
   display: block;
+  height: 60px;
+  padding: 18px 20px;
   -webkit-transition: background-color 0.5s;
   -o-transition: background-color 0.5s;
   transition: background-color 0.5s;
   text-align: center;
-  height: 60px;
-  min-width: 350px;
-  padding: 18px 20px;
+  letter-spacing: 0.1em;
   border: 2px solid #2d3651;
   background-color: rgba(45, 54, 81, 0.8);
-  letter-spacing: 0.1em;
   font-size: 1.125rem;
 }
 
@@ -734,8 +744,8 @@ a {
 
 .skill-item__title {
   z-index: 2;
-  letter-spacing: 0.1em;
   margin: 0;
+  letter-spacing: 0.1em;
   position: absolute;
   top: 0;
   right: 0;
@@ -829,16 +839,16 @@ a {
 }
 
 .about {
-  letter-spacing: 0.055em;
-  background-color: #e5e5e5;
   padding-top: 100px;
   padding-bottom: 100px;
+  letter-spacing: 0.055em;
+  background-color: #e5e5e5;
 }
 
 .about-container {
   display: grid;
-  grid-template-columns: 1fr 274px;
   grid-gap: 100px;
+  grid-template-columns: 1fr 274px;
 }
 
 .about-content {
@@ -889,15 +899,15 @@ a {
 .btn-accent__form {
   width: 100%;
   height: 60px;
-  font-size: 1.125rem;
+  -webkit-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  transition: background-color 0.5s;
   letter-spacing: 0.1em;
   color: #ffffff;
   border-color: rgba(255, 255, 255, 0);
   border-bottom-color: rgba(255, 255, 255, 0.4);
   background-color: rgba(255, 255, 255, 0.1);
-  -webkit-transition: background-color 0.5s;
-  -o-transition: background-color 0.5s;
-  transition: background-color 0.5s;
+  font-size: 1.125rem;
 }
 
 .btn-accent__form:hover {
@@ -917,14 +927,13 @@ input:focus {
 }
 
 .form-container {
-  grid-template-columns: repeat(3, 1fr);
   display: grid;
   grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .form-item__input {
   display: block;
-  color: #ffffff;
   width: 100%;
   height: 60px;
   padding-right: 30px;
@@ -933,6 +942,7 @@ input:focus {
   -o-transition: background-color 0.5s, border-color 0.5s;
   transition: background-color 0.5s, border-color 0.5s;
   letter-spacing: 0.15em;
+  color: #ffffff;
   border: 2px solid rgba(255, 255, 255, 0);
   border-bottom-color: rgba(255, 255, 255, 0.25);
   background-color: rgba(255, 255, 255, 0.05);
@@ -955,8 +965,7 @@ input:focus {
   display: grid;
   padding-bottom: 20px;
   grid-gap: 20px;
-  grid-template-areas: "p1 p1 p2 p3"
- "p4 p5 p6 p6";
+  grid-template-areas: "p1 p1 p2 p3" "p4 p5 p6 p6";
   grid-template-columns: repeat(4, 1fr);
 }
 
@@ -1015,24 +1024,24 @@ input:focus {
 }
 
 .post-item__caption h3 {
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+  text-align: center;
   letter-spacing: 0.05em;
   color: #637588;
   font-family: "Roboto Slab", serif;
   font-size: 1.125rem;
-  -webkit-transition: color 0.5s;
-  -o-transition: color 0.5s;
-  transition: color 0.5s;
-  text-align: center;
 }
 
 .post-item__caption p {
-  font-size: 0.98rem;
-  letter-spacing: 0.01em;
   -webkit-transition: color 0.5s;
   -o-transition: color 0.5s;
   transition: color 0.5s;
   text-align: center;
+  letter-spacing: 0.01em;
   color: #637588;
+  font-size: 0.98rem;
 }
 
 .post-item:hover {
@@ -1120,9 +1129,9 @@ input:focus {
 }
 
 .fab {
+  font-family: "Font Awesome 5 Brands";
   font-size: 36px;
   font-weight: 400;
-  font-family: "Font Awesome 5 Brands";
 }
 
 .footer__copy span:nth-of-type(1) {
@@ -1216,8 +1225,8 @@ input:focus {
     padding-bottom: 80px;
   }
   .about-container {
-    grid-template-columns: 1fr 271px;
     grid-gap: 40px;
+    grid-template-columns: 1fr 271px;
   }
   .about-content p:first-of-type::after {
     right: -20px;
@@ -1225,15 +1234,13 @@ input:focus {
   .form-container {
     grid-template-columns: repeat(3, 1fr);
   }
-  .posts__grid {
-    grid-template-areas: "p1 p1 p2"
- "p3 p4 p4"
- "p5 p5 p6";
-    grid-template-columns: repeat(3, 1fr);
-  }
   .posts {
     padding-top: 80px;
     padding-bottom: 80px;
+  }
+  .posts__grid {
+    grid-template-areas: "p1 p1 p2" "p3 p4 p4" "p5 p5 p6";
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -1282,8 +1289,8 @@ input:focus {
     padding-bottom: 60px;
   }
   .about-container {
-    grid-template-columns: 1fr 236px;
     grid-gap: 20px;
+    grid-template-columns: 1fr 236px;
   }
   .about-content p:first-of-type::after {
     right: -10px;
@@ -1294,23 +1301,21 @@ input:focus {
   .form-item:nth-of-type(1) {
     grid-column: 1 / span 2;
   }
-  .posts__grid {
-    grid-template-areas: "p1 p2"
- "p3 p4"
- "p5 p6";
-    grid-template-columns: 1fr 1fr;
-  }
   .posts {
     padding-top: 60px;
     padding-bottom: 60px;
+  }
+  .posts__grid {
+    grid-template-areas: "p1 p2" "p3 p4" "p5 p6";
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (max-width: 575.8px) {
   h2 {
     margin-bottom: 36px;
-    font-size: 1.5rem;
     text-align: center;
+    font-size: 1.5rem;
   }
   .btn-accent__skills,
   .btn-accent__posts {
@@ -1341,23 +1346,18 @@ input:focus {
     padding-bottom: 60px;
   }
   .about-container {
-    grid-template-columns: 1fr;
     grid-gap: 20px;
+    grid-template-columns: 1fr;
   }
   .form-container {
-    grid-template-columns: 1fr;
-  }
-  .posts__grid {
-    grid-template-areas: "p1"
- "p2"
- "p3"
- "p4"
- "p5"
- "p6";
     grid-template-columns: 1fr;
   }
   .posts {
     padding-top: 60px;
     padding-bottom: 60px;
+  }
+  .posts__grid {
+    grid-template-areas: "p1" "p2" "p3" "p4" "p5" "p6";
+    grid-template-columns: 1fr;
   }
 }

@@ -4,8 +4,6 @@
 
 html {
   overflow-x: hidden;
-  overflow-y: scroll;
-
   letter-spacing: 0.1em;
 
   color: $color-gray;
@@ -116,7 +114,6 @@ a {
 .btn-accent__posts {
   display: block;
 
-  min-width: 350px;
   height: 60px;
   padding: 18px $gap;
 
@@ -129,11 +126,11 @@ a {
 
   font-size: 1.125rem;
 
-  @media (min-width: 576px) {
+  @include sm-min {
     min-width: 350px;
   }
 
-  @media (max-width: 575.8px) {
+  @include sm {
     width: 100%;
   }
 }
